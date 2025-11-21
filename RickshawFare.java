@@ -21,14 +21,14 @@ public class RickshawFare {
         boolean isLocal = local.equalsIgnoreCase("yes") ? true : false;
         boolean isNight = night.equalsIgnoreCase("yes") ? true : false;
 
-        double fare = 50 + (km * 20) + (min * 2); // simple base + distance + time
+        double fare = 50 + (km * 20) + (min * 2); 
 
         if (isLocal && km > 10) {
-            fare = fare - (fare * 0.10); // 10% off
+            fare = fare - (fare * 0.10);
         }
 
         if (isNight) {
-            fare = fare + (fare * 0.15); // 15% extra
+            fare = fare + (fare * 0.15); 
         }
 
         System.out.println("Final Fare: Rs. " + (int)fare);
